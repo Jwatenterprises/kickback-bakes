@@ -1,0 +1,2053 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kick Back Bakes — Personal Chef, Catering & Caribbean Cuisine</title>
+  <meta name="description" content="Kick Back Bakes by Chef Tiesha. Authentic Caribbean dishes, Jamaican favorites, American comfort food, fresh bakes & exotic juices. Personal Chef at $30/hr & full catering.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #090E16;
+      --bg-surface: #101824;
+      --bg-card: #152233;
+      --bg-card-hover: #1A2B42;
+      --border: #23354E;
+      --border-light: #32496A;
+      
+      --teal: #1AB8B8;
+      --teal-hover: #22d6d6;
+      --teal-glow: rgba(26, 184, 184, 0.25);
+      
+      --gold: #F4B840;
+      --gold-dark: #C68F23;
+      --gold-glow: rgba(244, 184, 64, 0.22);
+      
+      --terracotta: #D35400;
+      --green: #25D366;
+      --cream: #FFF7EB;
+      
+      --text: #F3F4F6;
+      --text-muted: #9CA3AF;
+      --text-dim: #6B7280;
+      
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-full: 9999px;
+      
+      --shadow-card: 0 16px 36px rgba(0, 0, 0, 0.4);
+      --shadow-glow: 0 0 40px rgba(26, 184, 184, 0.15);
+      --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      padding-bottom: 60px;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4 {
+      font-weight: 800;
+      line-height: 1.2;
+      color: #FFFFFF;
+    }
+
+    .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Top Banner / Announcement */
+    .top-bar {
+      background: linear-gradient(90deg, #0d5f5f 0%, #0F141C 50%, #875707 100%);
+      border-bottom: 1px solid rgba(244, 184, 64, 0.3);
+      padding: 8px 16px;
+      text-align: center;
+      font-size: 0.88rem;
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .top-bar a {
+      color: var(--gold);
+      text-decoration: underline;
+      font-weight: 700;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(10, 15, 23, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      transition: var(--transition);
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 78px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .brand-logo img {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 2px solid var(--gold);
+      object-fit: cover;
+      background: var(--cream);
+    }
+
+    .brand-title {
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      color: #FFF;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-title span {
+      font-size: 0.72rem;
+      color: var(--gold);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-top: -3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--teal);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: var(--radius-full);
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+    }
+
+    .btn-sm {
+      padding: 8px 16px;
+      font-size: 0.85rem;
+    }
+
+    .btn-lg {
+      padding: 16px 32px;
+      font-size: 1.05rem;
+    }
+
+    .btn-teal {
+      background: var(--teal);
+      color: #07171E;
+      box-shadow: 0 4px 18px var(--teal-glow);
+    }
+
+    .btn-teal:hover {
+      background: var(--teal-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(26, 184, 184, 0.4);
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #171004;
+      box-shadow: 0 4px 18px var(--gold-glow);
+    }
+
+    .btn-gold:hover {
+      background: #ffd06b;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(244, 184, 64, 0.4);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.05);
+      color: #FFF;
+      border: 1px solid var(--border-light);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: var(--teal);
+      transform: translateY(-2px);
+    }
+
+    .btn-whatsapp {
+      background: #1f9c4c;
+      color: #FFFFFF;
+    }
+
+    .btn-whatsapp:hover {
+      background: #25D366;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      padding: 60px 0 90px 0;
+      overflow: hidden;
+      background: radial-gradient(circle at 75% 20%, rgba(26, 184, 184, 0.12) 0%, transparent 55%),
+                  radial-gradient(circle at 20% 80%, rgba(244, 184, 64, 0.08) 0%, transparent 50%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(244, 184, 64, 0.12);
+      color: var(--gold);
+      border: 1px solid rgba(244, 184, 64, 0.4);
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-size: 3.6rem;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+    }
+
+    .hero-title .highlight-gold {
+      color: var(--gold);
+      background: linear-gradient(120deg, #FFFFFF 30%, var(--gold) 90%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-tagline-quote {
+      font-size: 1.5rem;
+      font-style: italic;
+      color: var(--teal);
+      margin-bottom: 20px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero-subtitle {
+      font-size: 1.18rem;
+      color: var(--text-muted);
+      margin-bottom: 34px;
+      max-width: 580px;
+      line-height: 1.7;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .hero-badges-row {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .hero-stat {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hero-stat-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(26, 184, 184, 0.12);
+      border: 1px solid rgba(26, 184, 184, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: var(--teal);
+    }
+
+    .hero-stat-text h4 {
+      font-size: 1.1rem;
+      color: #FFF;
+    }
+
+    .hero-stat-text p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Hero Emblem Presentation */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .emblem-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 460px;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(26, 184, 184, 0.2) 0%, rgba(20, 30, 45, 0.9) 70%);
+      padding: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 50px rgba(244, 184, 64, 0.15);
+      border: 2px solid rgba(244, 184, 64, 0.35);
+      animation: floatSmooth 6s ease-in-out infinite;
+    }
+
+    @keyframes floatSmooth {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .emblem-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 14px 28px rgba(0,0,0,0.45));
+    }
+
+    .floating-card {
+      position: absolute;
+      background: rgba(16, 24, 36, 0.92);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-light);
+      padding: 12px 18px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 10;
+    }
+
+    .floating-card-1 {
+      bottom: 20px;
+      left: -20px;
+      border-left: 4px solid var(--teal);
+    }
+
+    .floating-card-2 {
+      top: 30px;
+      right: -20px;
+      border-left: 4px solid var(--gold);
+    }
+
+    .floating-card .fc-icon {
+      font-size: 1.5rem;
+    }
+
+    .floating-card .fc-val {
+      font-weight: 800;
+      font-size: 1rem;
+      color: #FFF;
+    }
+
+    .floating-card .fc-lbl {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 90px 0;
+      position: relative;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 60px auto;
+    }
+
+    .section-pill {
+      display: inline-block;
+      background: rgba(26, 184, 184, 0.12);
+      color: var(--teal);
+      border: 1px solid rgba(26, 184, 184, 0.35);
+      padding: 5px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 2.6rem;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+
+    /* Services Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 32px;
+    }
+
+    .service-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px 30px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-card);
+      transition: var(--transition);
+      overflow: hidden;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--teal);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.6), var(--shadow-glow);
+    }
+
+    .service-card.highlighted {
+      border: 2px solid var(--gold);
+      background: linear-gradient(180deg, #18283d 0%, #131e2e 100%);
+    }
+
+    .service-ribbon {
+      position: absolute;
+      top: 18px;
+      right: 20px;
+      background: var(--gold);
+      color: #0F141C;
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .service-icon {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .service-price {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .service-price .amount {
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--gold);
+    }
+
+    .service-price .unit {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .service-name {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+
+    .service-detail {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .service-list {
+      list-style: none;
+      margin-bottom: 30px;
+      flex-grow: 1;
+    }
+
+    .service-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 0.92rem;
+      color: #E2E8F0;
+    }
+
+    .service-list li::before {
+      content: "✓";
+      color: var(--teal);
+      font-weight: 900;
+    }
+
+    /* Food Truck Teaser Special Card */
+    .foodtruck-card {
+      border: 2px dashed rgba(244, 184, 64, 0.4);
+      background: linear-gradient(135deg, #161820 0%, #22201b 100%);
+    }
+
+    .foodtruck-card:hover {
+      border-color: var(--gold);
+    }
+
+    .pulse-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(211, 84, 0, 0.2);
+      border: 1px solid var(--terracotta);
+      color: #FFA07A;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      width: fit-content;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: #FF5722;
+      border-radius: 50%;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.9); opacity: 0.6; }
+      50% { transform: scale(1.3); opacity: 1; }
+      100% { transform: scale(0.9); opacity: 0.6; }
+    }
+
+    /* Menu Section */
+    .menu-section {
+      background: #0B111B;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .menu-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .tab-btn {
+      padding: 10px 22px;
+      border-radius: var(--radius-full);
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .tab-btn:hover {
+      color: #FFF;
+      border-color: var(--teal);
+    }
+
+    .tab-btn.active {
+      background: var(--teal);
+      color: #07171E;
+      border-color: var(--teal);
+      box-shadow: 0 4px 16px var(--teal-glow);
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 24px;
+    }
+
+    .menu-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--teal);
+      background: var(--bg-card-hover);
+    }
+
+    .menu-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 10px;
+      gap: 12px;
+    }
+
+    .menu-item-name {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #FFF;
+    }
+
+    .menu-item-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    .tag-island {
+      background: rgba(244, 184, 64, 0.15);
+      color: var(--gold);
+      border: 1px solid rgba(244, 184, 64, 0.3);
+    }
+
+    .tag-spicy {
+      background: rgba(211, 84, 0, 0.2);
+      color: #FFA07A;
+      border: 1px solid rgba(211, 84, 0, 0.4);
+    }
+
+    .tag-fresh {
+      background: rgba(37, 211, 102, 0.15);
+      color: #4ade80;
+      border: 1px solid rgba(37, 211, 102, 0.3);
+    }
+
+    .menu-item-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 18px;
+      flex-grow: 1;
+      line-height: 1.55;
+    }
+
+    .menu-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 14px;
+      border-top: 1px dashed var(--border);
+    }
+
+    .menu-flavor-badge {
+      font-size: 0.8rem;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .add-to-inquiry-btn {
+      background: transparent;
+      border: 1px solid var(--border-light);
+      color: var(--teal);
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .add-to-inquiry-btn:hover {
+      background: var(--teal);
+      color: #07171E;
+    }
+
+    /* Chef Story Section */
+    .story-section {
+      padding: 100px 0;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .mascot-display {
+      position: relative;
+      background: radial-gradient(circle, rgba(244, 184, 64, 0.18) 0%, rgba(15, 23, 35, 0.8) 70%);
+      border: 2px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      text-align: center;
+      box-shadow: var(--shadow-card);
+    }
+
+    .mascot-display img {
+      max-width: 100%;
+      height: 420px;
+      object-fit: contain;
+      filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.5));
+    }
+
+    .mascot-caption {
+      margin-top: 16px;
+      font-weight: 800;
+      color: var(--gold);
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+    }
+
+    .story-text h2 {
+      font-size: 2.6rem;
+      margin-bottom: 20px;
+    }
+
+    .story-quote {
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--teal);
+      border-left: 3px solid var(--teal);
+      padding-left: 20px;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .story-p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .pillar-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px;
+    }
+
+    .pillar-item h4 {
+      color: var(--gold);
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+    }
+
+    .pillar-item p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Booking & Calculator Section */
+    .booking-section {
+      background: linear-gradient(180deg, #090E16 0%, #111A28 50%, #090E16 100%);
+      border-top: 1px solid var(--border);
+    }
+
+    .booking-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 48px 40px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #E2E8F0;
+      margin-bottom: 8px;
+    }
+
+    .form-control {
+      width: 100%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      color: #FFF;
+      font-size: 0.95rem;
+      font-family: inherit;
+      transition: var(--transition);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(26, 184, 184, 0.2);
+    }
+
+    .service-options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .service-radio-label {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 12px 8px;
+      text-align: center;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .service-radio-label input {
+      display: none;
+    }
+
+    .service-radio-label:hover {
+      border-color: var(--teal);
+      color: #FFF;
+    }
+
+    .service-radio-label.selected {
+      border-color: var(--teal);
+      background: rgba(26, 184, 184, 0.12);
+      color: var(--teal);
+    }
+
+    /* Live Summary Box */
+    .summary-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .summary-title {
+      font-size: 1.25rem;
+      color: #FFF;
+      margin-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    .summary-row.bold {
+      color: #FFF;
+      font-weight: 700;
+    }
+
+    .summary-total {
+      margin-top: auto;
+      padding-top: 18px;
+      border-top: 2px dashed var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .summary-total .total-label {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #FFF;
+    }
+
+    .summary-total .total-amt {
+      font-size: 1.9rem;
+      font-weight: 900;
+      color: var(--gold);
+    }
+
+    .instant-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    /* Reviews */
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .review-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      position: relative;
+    }
+
+    .review-stars {
+      color: var(--gold);
+      font-size: 1.1rem;
+      margin-bottom: 12px;
+    }
+
+    .review-quote {
+      color: #E2E8F0;
+      font-size: 0.96rem;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+
+    .reviewer-meta h5 {
+      font-size: 0.95rem;
+      color: #FFF;
+    }
+
+    .reviewer-meta p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Footer */
+    footer {
+      background: #06090F;
+      border-top: 1px solid var(--border);
+      padding: 70px 0 40px 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-brand p {
+      color: var(--text-muted);
+      margin-top: 14px;
+      font-size: 0.92rem;
+      max-width: 320px;
+      line-height: 1.6;
+    }
+
+    .footer-col h4 {
+      font-size: 1rem;
+      color: #FFF;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col ul li a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+
+    .footer-col ul li a:hover {
+      color: var(--teal);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    /* Floating Mobile Bar */
+    .mobile-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(10, 15, 23, 0.96);
+      backdrop-filter: blur(16px);
+      border-top: 1px solid var(--border-light);
+      padding: 10px 16px;
+      z-index: 9999;
+      box-shadow: 0 -10px 25px rgba(0, 0, 0, 0.6);
+    }
+
+    .mobile-bar-inner {
+      display: flex;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .mobile-bar-inner a {
+      flex: 1;
+      padding: 12px 6px;
+      font-size: 0.85rem;
+      border-radius: var(--radius-full);
+      text-align: center;
+      text-decoration: none;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-subtitle {
+        margin: 0 auto 30px auto;
+      }
+      .hero-cta-group {
+        justify-content: center;
+      }
+      .hero-badges-row {
+        justify-content: center;
+      }
+      .story-grid {
+        grid-template-columns: 1fr;
+      }
+      .booking-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .hero-title {
+        font-size: 2.5rem;
+      }
+      .mobile-bar {
+        display: block;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+      .floating-card-1 {
+        left: 0;
+      }
+      .floating-card-2 {
+        right: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <span>🌴 Now Booking Spring &amp; Summer In-Home Personal Chef Dinners &bull; Rate: $30/hr</span>
+    <span>📞 Direct Call / Text: <a href="tel:7542019376">754-201-9376</a></span>
+  </div>
+
+  <!-- Main Navigation -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="brand-logo">
+        <img src="assets/KickBackBakes_Logo_ChefTiesha_Platter.png" alt="Kick Back Bakes Logo">
+        <div class="brand-title">
+          KICK BACK BAKES
+          <span>Chef Tiesha &bull; Est. 2024</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#menu">Menu Highlights</a></li>
+        <li><a href="#story">Chef Tiesha</a></li>
+        <li><a href="#food-truck">Food Truck</a></li>
+        <li><a href="#booking">Book / Quote</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="tel:7542019376" class="btn btn-outline btn-sm">📞 (754) 201-9376</a>
+        <a href="#booking" class="btn btn-teal btn-sm">Book a Chef</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span>🌴</span> Personal Chef &bull; Catering &bull; Mobile Bakes
+        </div>
+        <h1 class="hero-title font-serif">
+          Kick Back. Relax.<br>
+          <span class="highlight-gold">We’ll Cook It.</span>
+        </h1>
+        <div class="hero-tagline-quote">
+          “Authentic Caribbean Soul &bull; Fresh Daily Bakes”
+        </div>
+        <p class="hero-subtitle">
+          Experience gourmet island flavours right in your own kitchen or celebration. From private intimate dinners and church gatherings to large event catering, Chef Tiesha brings the rich culinary traditions of Jamaica and the Caribbean straight to your table.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#booking" class="btn btn-teal btn-lg">🥘 Book Chef Tiesha ($30/hr)</a>
+          <a href="https://wa.me/17542019376?text=Hi%20Chef%20Tiesha!%20I'd%20like%20to%20inquire%20about%20booking%20Kick%20Back%20Bakes." target="_blank" class="btn btn-whatsapp btn-lg">
+            💬 WhatsApp Inquiry
+          </a>
+          <a href="tel:7542019376" class="btn btn-outline btn-lg">📞 Call 754-201-9376</a>
+        </div>
+
+        <div class="hero-badges-row">
+          <div class="hero-stat">
+            <div class="hero-stat-icon">💰</div>
+            <div class="hero-stat-text">
+              <h4>$30 / Hour</h4>
+              <p>In-Home Chef Rate</p>
+            </div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-icon">🥘</div>
+            <div class="hero-stat-text">
+              <h4>100% Authentic</h4>
+              <p>Caribbean &amp; American</p>
+            </div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-icon">⛪</div>
+            <div class="hero-stat-text">
+              <h4>Events &amp; Churches</h4>
+              <p>Full Catering Setups</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Emblem -->
+      <div class="hero-visual">
+        <div class="emblem-wrapper">
+          <img src="assets/KickBackBakes_Logo_ChefTiesha_Platter.png" alt="Chef Tiesha Kick Back Bakes Official Platter Emblem">
+        </div>
+        <div class="floating-card floating-card-1">
+          <div class="fc-icon">👩🏾‍🍳</div>
+          <div>
+            <div class="fc-val">Chef Tiesha</div>
+            <div class="fc-lbl">Master Culinary Artist</div>
+          </div>
+        </div>
+        <div class="floating-card floating-card-2">
+          <div class="fc-icon">⭐</div>
+          <div>
+            <div class="fc-val">5-Star Flavour</div>
+            <div class="fc-lbl">South Florida &bull; Events</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">Our Core Services</div>
+        <h2 class="section-title">How We Serve You</h2>
+        <p class="section-desc">
+          Whether you want an intimate gourmet dinner prepared in your home or food truck vibes at your next big festival, we handle everything from stove to plate.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1: Personal Chef -->
+        <div class="service-card highlighted">
+          <div class="service-ribbon">Most Popular</div>
+          <div class="service-icon">👩🏾‍🍳</div>
+          <div class="service-price">
+            <span class="amount">$30</span>
+            <span class="unit">/ hour</span>
+          </div>
+          <h3 class="service-name">Personal Chef Service</h3>
+          <p class="service-detail">
+            Chef Tiesha comes directly to your home, church kitchen, or rental villa to cook customized meals tailored to your taste.
+          </p>
+          <ul class="service-list">
+            <li>In-home intimate dining &amp; date nights</li>
+            <li>Family dinners &amp; Sunday church gatherings</li>
+            <li>Custom menu design (Caribbean or American)</li>
+            <li>Grocery shopping &amp; fresh ingredient prep</li>
+            <li>Full kitchen cleanup &amp; sanitized workspaces</li>
+          </ul>
+          <a href="#booking" onclick="selectService('personal_chef')" class="btn btn-gold">Reserve Personal Chef</a>
+        </div>
+
+        <!-- Service 2: Full Catering -->
+        <div class="service-card">
+          <div class="service-icon">🥘</div>
+          <div class="service-price">
+            <span class="amount">Custom</span>
+            <span class="unit">per guest / package</span>
+          </div>
+          <h3 class="service-name">Event Catering</h3>
+          <p class="service-detail">
+            Full-scale culinary spreads for weddings, birthdays, church banquets, corporate meetings, and family reunions.
+          </p>
+          <ul class="service-list">
+            <li>Scalable packages for 15 to 300+ guests</li>
+            <li>Chafing dishes, buffet stations &amp; warmers</li>
+            <li>Signature Caribbean jerk, oxtail &amp; curry setups</li>
+            <li>Pastry trays (flaky beef patties &amp; coco breads)</li>
+            <li>Professional plating &amp; serving options</li>
+          </ul>
+          <a href="#booking" onclick="selectService('catering')" class="btn btn-teal">Request Catering Quote</a>
+        </div>
+
+        <!-- Service 3: Food Truck Teaser -->
+        <div class="service-card foodtruck-card" id="food-truck">
+          <div class="pulse-badge">
+            <span class="pulse-dot"></span> Coming Soon!
+          </div>
+          <div class="service-icon">🚚</div>
+          <div class="service-price">
+            <span class="amount">Mobile</span>
+            <span class="unit">Island Street Food</span>
+          </div>
+          <h3 class="service-name">Kick Back Food Truck</h3>
+          <p class="service-detail">
+            We are bringing the island street food heat directly to food truck rallies, festivals, corporate campuses, and private pop-ups!
+          </p>
+          <ul class="service-list">
+            <li>Hot-off-the-grill jerk chicken &amp; pork rolls</li>
+            <li>Steaming Jamaican beef patties &amp; coco bread</li>
+            <li>Signature fresh squeezed exotic juices</li>
+            <li>Available for private block parties &amp; pop-ups</li>
+          </ul>
+          <a href="#booking" onclick="selectService('food_truck')" class="btn btn-outline">Notify Me / Book Truck</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Highlights Section -->
+  <section id="menu" class="menu-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">Signature Culinary Offerings</div>
+        <h2 class="section-title">Mouth-Watering Highlights</h2>
+        <p class="section-desc">
+          Handcrafted with authentic Caribbean herbs, pimento, thyme, Scotch bonnet peppers, and love. Click any dish to add it to your booking wishlist!
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="menu-tabs">
+        <button class="tab-btn active" onclick="filterMenu('all', this)">All Specialties</button>
+        <button class="tab-btn" onclick="filterMenu('caribbean', this)">Caribbean &amp; American Dishes</button>
+        <button class="tab-btn" onclick="filterMenu('bakes', this)">Fresh Baked Goods</button>
+        <button class="tab-btn" onclick="filterMenu('juices', this)">Exotic Island Juices</button>
+      </div>
+
+      <!-- Menu Grid -->
+      <div class="menu-grid" id="menuContainer">
+        <!-- Dish 1 -->
+        <div class="menu-card" data-category="caribbean">
+          <div class="menu-card-top">
+            <div class="menu-item-name">Authentic Jerk Chicken</div>
+            <span class="menu-item-tag tag-spicy">Chef's Signature</span>
+          </div>
+          <p class="menu-item-desc">
+            Marinated for 48 hours in authentic Jamaican pimento, Scotch bonnet peppers, fresh thyme, and scallions, grilled to smoky perfection.
+          </p>
+          <div class="menu-card-footer">
+            <span class="menu-flavor-badge">🌶️ Smoky &amp; Herbaceous</span>
+            <button class="add-to-inquiry-btn" onclick="addWishlistItem('Authentic Jerk Chicken')">+ Add to Wishlist</button>
+          </div>
+        </div>
+
+        <!-- Dish 2 -->
+        <div class="menu-card" data-category="caribbean">
+          <div class="menu-card-top">
+            <div class="menu-item-name">Slow-Braised Oxtail</div>
+            <span class="menu-item-tag tag-island">Premium Classic</span>
+          </div>
+          <p class="menu-item-desc">
+            Tender, melt-in-your-mouth oxtail slow-cooked in a rich, velvety dark gravy with butter beans, aromatic garlic, and island spices.
+          </p>
+          <div class="menu-card-footer">
+            <span class="menu-flavor-badge">🍲 Savory &amp; Succulent</span>
+            <button class="add-to-inquiry-btn" onclick="addWishlistItem('Slow-Braised Oxtail')">+ Add to Wishlist</button>
+          </div>
+        </div>
+
+        <!-- Dish 3 -->
+        <div class="menu-card" data-category="caribbean">
+          <div class="menu-card-top">
+            <div class="menu-item-name">Jamaican Curry Goat</div>
+            <span class="menu-item-tag tag-spicy">Traditional</span>
+          </div>
+          <p class="menu-item-desc">
+            Succulent cuts of goat infused with roasted Jamaican curry powder, ginger, potatoes, and simmered till fork-tender.
+          </p>
+          <div class="menu-card-footer">
+            <span class="menu-flavor-badge">🍛 Bold &amp; Aromatic</span>
+            <button class="add-to-inquiry-btn" onclick="addWishlistItem('Jamaican Curry Goat')">+ Add to Wishlist</button>
+          </div>
+        </div>
+
+        <!-- Dish 4 -->
+        <div class="menu-card" data-category="caribbean">
+          <div class="menu-card-top">
+            <div class="menu-item-name">Honey Glazed BBQ Ribs</div>
+            <span class="menu-item-tag tag-island">American Soul</span>
+          </div>
+          <p class="menu-item-desc">
+            Fall-off-the-bone tender baby back ribs basted in Chef Tiesha's signature sweet island honey-BBQ sauce.
+          </p>
+          <div class="menu-card-footer">
+            <span class="menu-flavor-badge">🍖 Sweet &amp; Tangy</span>
+            <button class="add-to-inquiry-btn" onclick="addWishlistItem('Honey Glazed BBQ Ribs')">+ Add to Wishlist</button>
+          </div>
+        </div>
+
+        <!-- Dish 5 -->
+        <div class="menu-card" data-category="caribbean">
+          <div class="menu-card-top">
+            <div class="menu-item-name">Southern Baked Mac &amp; Cheese</div>
+            <span class="menu-item-tag tag-island">Soul Favorite</span>
+          </div>
+          <p class="menu-item-desc">
+            Five-cheese blend baked with a golden crust, rich cream, and seasoned with a touch of nutmeg and paprika.
+          </p>
+          <div class="menu-card-footer">
+            <span class="menu-flavor-badge">🧀 Ultra Creamy</span>
+            <button class="add-to-inquiry-btn" onclick="addWishlistItem('Baked Mac & Cheese')">+ Add to Wishlist</button>
+          </div>
+        </div>
+
+        <!-- Dish 6: Bakes -->
+        <div class="menu-card" data-category="bakes">
+          <div class="menu-card-top">
+            <div class="menu-item-name">Golden Flaky Beef Patties</div>
+            <span class="menu-item-tag tag-fresh">Baked Fresh Daily</span>
+          </div>
+          <p class="menu-item-desc">
+            Hand-rolled turmeric crust bursting with delicately spiced minced beef, scotch bonnet heat, and savory island broth.
+          </p>
+          <div class="menu-card-footer">
+            <span class="menu-flavor-badge">🥟 Flaky &amp; Golden</span>
+            <button class="add-to-inquiry-btn" onclick="addWishlistItem('Golden Flaky Beef Patties')">+ Add to Wishlist</button>
+          </div>
+        </div>
+
+        <!-- Dish 7: Bakes -->
+        <div class="menu-card" data-category="bakes">
+          <div class="menu-card-top">
+            <div class="menu-item-name">Warm Sweet Coco Bread</div>
+            <span class="menu-item-tag tag-fresh">House Specialty</span>
+          </div>
+          <p class="menu-item-desc">
+            Pillowy soft, buttery Jamaican yeast bread made with fresh coconut milk. The quintessential pairing for golden beef patties.
+          </p>
+          <div class="menu-card-footer">
+            <span class="menu-flavor-badge">🥖 Sweet &amp; Pillowy</span>
+            <button class="add-to-inquiry-btn" onclick="addWishlistItem('Warm Sweet Coco Bread')">+ Add to Wishlist</button>
+          </div>
+        </div>
+
+        <!-- Dish 8: Bakes -->
+        <div class="menu-card" data-category="bakes">
+          <div class="menu-card-top">
+            <div class="menu-item-name">Steaming Jerk Roll</div>
+            <span class="menu-item-tag tag-spicy">Chef Creation</span>
+          </div>
+          <p class="menu-item-desc">
+            Tender shredded jerk chicken wrapped in a warm, flaky pastry spiral with sweet pepper relish and caramelized onions.
+          </p>
+          <div class="menu-card-footer">
+            <span class="menu-flavor-badge">🥐 Savory Pastry</span>
+            <button class="add-to-inquiry-btn" onclick="addWishlistItem('Steaming Jerk Roll')">+ Add to Wishlist</button>
+          </div>
+        </div>
+
+        <!-- Dish 9: Bakes -->
+        <div class="menu-card" data-category="bakes">
+          <div class="menu-card-top">
+            <div class="menu-item-name">Caribbean Spiced Rum Cake</div>
+            <span class="menu-item-tag tag-island">Sweet Treat</span>
+          </div>
+          <p class="menu-item-desc">
+            Decadent island sponge cake soaked in premium dark Caribbean rum, brown sugar, cinnamon, and vanilla bean glaze.
+          </p>
+          <div class="menu-card-footer">
+            <span class="menu-flavor-badge">🍰 Rich &amp; Boozy</span>
+            <button class="add-to-inquiry-btn" onclick="addWishlistItem('Caribbean Spiced Rum Cake')">+ Add to Wishlist</button>
+          </div>
+        </div>
+
+        <!-- Dish 10: Juices -->
+        <div class="menu-card" data-category="juices">
+          <div class="menu-card-top">
+            <div class="menu-item-name">Fresh Pressed Island Sorrel</div>
+            <span class="menu-item-tag tag-fresh">Refreshing</span>
+          </div>
+          <p class="menu-item-desc">
+            Brewed from dried hibiscus petals, crushed spicy ginger root, whole cloves, and cane sugar. Served ice cold.
+          </p>
+          <div class="menu-card-footer">
+            <span class="menu-flavor-badge">🌺 Tart &amp; Spicy Ginger</span>
+            <button class="add-to-inquiry-btn" onclick="addWishlistItem('Fresh Island Sorrel')">+ Add to Wishlist</button>
+          </div>
+        </div>
+
+        <!-- Dish 11: Juices -->
+        <div class="menu-card" data-category="juices">
+          <div class="menu-card-top">
+            <div class="menu-item-name">Tropical Mango-Pineapple Fusion</div>
+            <span class="menu-item-tag tag-fresh">100% Fruit</span>
+          </div>
+          <p class="menu-item-desc">
+            Pure sunshine in a cup: ripe Caribbean mangoes and golden pineapples freshly blended with a splash of key lime.
+          </p>
+          <div class="menu-card-footer">
+            <span class="menu-flavor-badge">🍍 Sweet &amp; Luscious</span>
+            <button class="add-to-inquiry-btn" onclick="addWishlistItem('Mango-Pineapple Fusion')">+ Add to Wishlist</button>
+          </div>
+        </div>
+
+        <!-- Dish 12: Juices -->
+        <div class="menu-card" data-category="juices">
+          <div class="menu-card-top">
+            <div class="menu-item-name">Homemade Island Ginger Beer</div>
+            <span class="menu-item-tag tag-spicy">Invigorating</span>
+          </div>
+          <p class="menu-item-desc">
+            Authentic Jamaican-style ginger brew with intense spicy heat, fresh lime zest, and natural unrefined sugar cane.
+          </p>
+          <div class="menu-card-footer">
+            <span class="menu-flavor-badge">⚡ Fiery &amp; Crisp</span>
+            <button class="add-to-inquiry-btn" onclick="addWishlistItem('Homemade Island Ginger Beer')">+ Add to Wishlist</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chef Story Section -->
+  <section id="story" class="story-section">
+    <div class="container story-grid">
+      <div class="mascot-display">
+        <img src="assets/chef_tiesha_mascot_platter.png" alt="Chef Tiesha with Serving Platter">
+        <div class="mascot-caption">Meet Chef Tiesha &bull; Founder &amp; Executive Chef</div>
+      </div>
+
+      <div class="story-text">
+        <div class="section-pill">Our Heart &amp; Soul</div>
+        <h2 class="font-serif">The Story Behind Kick Back Bakes</h2>
+        <div class="story-quote">
+          “Food shouldn’t just satisfy your hunger; it should bring people together and let the host actually enjoy their own party.”
+        </div>
+        <p class="story-p">
+          Kick Back Bakes was founded with one clear mission: to bring the soul of the islands into your home with zero stress. Too often, hosts spend the entire evening running back and forth to the stove, stirring pots, and missing out on the laughter with family and friends.
+        </p>
+        <p class="story-p">
+          Chef Tiesha created the <strong>"Kick back and we'll cook it"</strong> philosophy. From hand-seasoned jerk and slow-cooked oxtail to fresh morning bakes and chilled sorrel, Chef Tiesha brings passion, warm Caribbean hospitality, and transparent pricing ($30/hr) to every single kitchen she enters.
+        </p>
+
+        <div class="pillars-grid">
+          <div class="pillar-item">
+            <h4>🌿 100% Authentic Flavors</h4>
+            <p>Real herbs, whole spices, and time-honored marinades.</p>
+          </div>
+          <div class="pillar-item">
+            <h4>🥖 Baked Fresh Daily</h4>
+            <p>Flaky patties, warm coco bread, and sweet pastries made by hand.</p>
+          </div>
+          <div class="pillar-item">
+            <h4>🤝 Stress-Free Hospitality</h4>
+            <p>We prep, cook, serve, and clean up so you can kick back.</p>
+          </div>
+          <div class="pillar-item">
+            <h4>💎 Affordable Luxury</h4>
+            <p>Professional chef service at a transparent $30/hr rate.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking & Live Quote Section -->
+  <section id="booking" class="booking-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">Fast &amp; Easy Reservations</div>
+        <h2 class="section-title">Book Your Date &amp; Get an Estimate</h2>
+        <p class="section-desc">
+          Fill out your details below to calculate your estimated chef service cost, or send an instant booking request directly to Chef Tiesha via WhatsApp.
+        </p>
+      </div>
+
+      <div class="booking-card">
+        <div class="booking-grid">
+          <!-- Left: Input Form -->
+          <div class="booking-form-col">
+            <h3 style="margin-bottom: 20px; font-size: 1.4rem;">1. Select Service Type</h3>
+            <div class="service-options">
+              <label class="service-radio-label selected" id="opt-personal">
+                <input type="radio" name="service_choice" value="personal_chef" checked onchange="updateServiceType('personal_chef')">
+                <span style="font-size: 1.3rem;">👩🏾‍🍳</span>
+                Personal Chef ($30/hr)
+              </label>
+              <label class="service-radio-label" id="opt-catering">
+                <input type="radio" name="service_choice" value="catering" onchange="updateServiceType('catering')">
+                <span style="font-size: 1.3rem;">🥘</span>
+                Event Catering
+              </label>
+              <label class="service-radio-label" id="opt-truck">
+                <input type="radio" name="service_choice" value="food_truck" onchange="updateServiceType('food_truck')">
+                <span style="font-size: 1.3rem;">🚚</span>
+                Food Truck Booking
+              </label>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group">
+                <label class="form-label">Your Name</label>
+                <input type="text" id="custName" class="form-control" placeholder="e.g. Marcus Johnson" oninput="updateSummary()">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Phone / WhatsApp</label>
+                <input type="tel" id="custPhone" class="form-control" placeholder="e.g. 754-000-0000" oninput="updateSummary()">
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group">
+                <label class="form-label">Event Date</label>
+                <input type="date" id="eventDate" class="form-control" onchange="updateSummary()">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Event Location / City</label>
+                <input type="text" id="eventLoc" class="form-control" placeholder="e.g. Fort Lauderdale, FL" oninput="updateSummary()">
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group">
+                <label class="form-label">Estimated Guest Count</label>
+                <input type="number" id="guestCount" class="form-control" value="8" min="1" max="500" oninput="updateSummary()">
+              </div>
+              <div class="form-group" id="hoursGroup">
+                <label class="form-label">Estimated Service Hours (@ $30/hr)</label>
+                <input type="number" id="serviceHours" class="form-control" value="4" min="2" max="12" oninput="updateSummary()">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Menu Wishlist &amp; Special Requests</label>
+              <textarea id="menuNotes" class="form-control" rows="3" placeholder="Select dishes from above or type items (e.g. Jerk Chicken, Rum Cake, Sorrel, Church dinner preferences)..." oninput="updateSummary()"></textarea>
+            </div>
+          </div>
+
+          <!-- Right: Live Summary & Direct CTA -->
+          <div class="booking-summary-col">
+            <div class="summary-card">
+              <h4 class="summary-title">Booking Estimate Summary</h4>
+              
+              <div class="summary-row">
+                <span>Selected Service:</span>
+                <span id="sumService" class="bold" style="color: var(--teal);">Personal Chef</span>
+              </div>
+              <div class="summary-row">
+                <span>Rate Structure:</span>
+                <span id="sumRate" class="bold">$30.00 per hour</span>
+              </div>
+              <div class="summary-row">
+                <span>Estimated Guests:</span>
+                <span id="sumGuests" class="bold">8 People</span>
+              </div>
+              <div class="summary-row" id="sumHoursRow">
+                <span>Estimated Time:</span>
+                <span id="sumHours" class="bold">4 Hours</span>
+              </div>
+              <div class="summary-row">
+                <span>Date &amp; Location:</span>
+                <span id="sumDateLoc" class="bold">Pending date selection</span>
+              </div>
+
+              <div style="margin-top: 14px; margin-bottom: 14px;">
+                <span style="font-size: 0.85rem; color: var(--text-muted); display: block; margin-bottom: 6px;">Menu Items in Wishlist:</span>
+                <div id="wishlistDisplay" style="font-size: 0.85rem; color: var(--gold); font-weight: 600;">
+                  (Click dishes on the menu to add them here)
+                </div>
+              </div>
+
+              <div class="summary-total">
+                <div class="total-label">Estimated Chef Labor:</div>
+                <div class="total-amt" id="sumTotal">$120.00</div>
+              </div>
+              <div style="font-size: 0.75rem; color: var(--text-dim); margin-top: 4px;">
+                * Groceries / ingredients reimbursed at receipt cost or customized per menu.
+              </div>
+
+              <div class="instant-actions">
+                <button type="button" onclick="submitToWhatsApp()" class="btn btn-whatsapp btn-lg" style="width: 100%;">
+                  💬 Send Booking Request on WhatsApp
+                </button>
+                <button type="button" onclick="submitViaEmail()" class="btn btn-outline" style="width: 100%;">
+                  ✉️ Submit via Email Inquiry
+                </button>
+                <a href="tel:7542019376" class="btn btn-gold" style="width: 100%;">
+                  📞 Direct Call Chef Tiesha: 754-201-9376
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Testimonials -->
+  <section class="reviews-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-pill">Client Love</div>
+        <h2 class="section-title">What Our Guests Are Saying</h2>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">
+            “Chef Tiesha cooked for our 20th anniversary dinner at our home. The oxtail was the most flavorful we’ve ever tasted in Florida, and the $30/hr rate was an absolute steal for this quality!”
+          </p>
+          <div class="reviewer-meta">
+            <h5>Samantha &amp; David M.</h5>
+            <p>In-Home Anniversary Dinner</p>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">
+            “We hired Kick Back Bakes for our church fellowship celebration. Over 90 people served hot jerk chicken, curry goat, and fresh coco bread. Flawless setup, warm smiles, and zero leftovers!”
+          </p>
+          <div class="reviewer-meta">
+            <h5>Pastor E. Thompson</h5>
+            <p>Church Gathering Catering</p>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-stars">★★★★★</div>
+          <p class="review-quote">
+            “Those fresh golden patties and the ginger beer gave me flashbacks to Kingston. Tiesha handled cooking and left the kitchen spotless. We didn’t lift a finger. Truly kicked back!”
+          </p>
+          <div class="reviewer-meta">
+            <h5>Michelle B.</h5>
+            <p>Private Birthday Dinner</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <img src="assets/KickBackBakes_Logo_ChefTiesha_Platter.png" alt="Kick Back Bakes">
+            <div class="brand-title">
+              KICK BACK BAKES
+              <span>Chef Tiesha</span>
+            </div>
+          </div>
+          <p>
+            Authentic Caribbean &amp; American cuisine, personal chef services, custom event catering, and mobile bakes.
+          </p>
+          <div style="margin-top: 16px; font-weight: 700; color: var(--gold);">
+            “Kick back and we'll cook it.”
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Personal Chef ($30/hr)</a></li>
+            <li><a href="#services">Church &amp; Event Catering</a></li>
+            <li><a href="#services">Private In-Home Dining</a></li>
+            <li><a href="#food-truck">Food Truck &amp; Pop-ups</a></li>
+            <li><a href="#booking">Custom Quote Calculator</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Menu Specials</h4>
+          <ul>
+            <li><a href="#menu">Authentic Jerk Chicken</a></li>
+            <li><a href="#menu">Slow-Braised Oxtail</a></li>
+            <li><a href="#menu">Fresh Flaky Patties</a></li>
+            <li><a href="#menu">Sweet Coco Bread</a></li>
+            <li><a href="#menu">Fresh Pressed Island Sorrel</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Direct Contact</h4>
+          <ul>
+            <li>📞 <a href="tel:7542019376">754-201-9376</a></li>
+            <li>💬 <a href="https://wa.me/17542019376" target="_blank">WhatsApp Chat</a></li>
+            <li>📍 South Florida &amp; Regional</li>
+            <li>⏰ Mon – Sun: 8:00 AM – 9:00 PM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2024–2026 Kick Back Bakes with Chef Tiesha. All Rights Reserved.</div>
+        <div>Personal Chef &bull; Catering &bull; Caribbean Soul Cuisine</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Mobile Action Bar (for Instagram & TikTok Traffic) -->
+  <div class="mobile-bar">
+    <div class="mobile-bar-inner">
+      <a href="tel:7542019376" class="btn btn-outline" style="background: rgba(255,255,255,0.08);">
+        📞 Call Now
+      </a>
+      <a href="https://wa.me/17542019376?text=Hi%20Chef%20Tiesha!%20I'd%20like%20to%20book%20a%20personal%20chef%20or%20catering%20service." target="_blank" class="btn btn-whatsapp">
+        💬 WhatsApp
+      </a>
+      <a href="#booking" class="btn btn-teal">
+        🥘 Book ($30/hr)
+      </a>
+    </div>
+  </div>
+
+  <!-- Interactive JavaScript -->
+  <script>
+    let currentService = 'personal_chef';
+    let wishlist = [];
+
+    // Filter Menu Items
+    function filterMenu(category, btnElement) {
+      const cards = document.querySelectorAll('.menu-card');
+      const buttons = document.querySelectorAll('.tab-btn');
+      
+      buttons.forEach(b => b.classList.remove('active'));
+      btnElement.classList.add('active');
+
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Add item to booking wishlist
+    function addWishlistItem(itemName) {
+      if (!wishlist.includes(itemName)) {
+        wishlist.push(itemName);
+      }
+      const notesField = document.getElementById('menuNotes');
+      notesField.value = "Wishlist: " + wishlist.join(", ");
+      updateSummary();
+
+      // Smooth scroll to booking
+      const bookingEl = document.getElementById('booking');
+      bookingEl.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Select Service from Card Buttons
+    function selectService(serviceType) {
+      currentService = serviceType;
+      document.querySelectorAll('.service-radio-label').forEach(lbl => lbl.classList.remove('selected'));
+      
+      if (serviceType === 'personal_chef') {
+        document.getElementById('opt-personal').classList.add('selected');
+        document.querySelector('input[value="personal_chef"]').checked = true;
+      } else if (serviceType === 'catering') {
+        document.getElementById('opt-catering').classList.add('selected');
+        document.querySelector('input[value="catering"]').checked = true;
+      } else {
+        document.getElementById('opt-truck').classList.add('selected');
+        document.querySelector('input[value="food_truck"]').checked = true;
+      }
+      updateServiceType(serviceType);
+    }
+
+    // Update Service Type Radio
+    function updateServiceType(serviceType) {
+      currentService = serviceType;
+      const hoursGroup = document.getElementById('hoursGroup');
+      const sumHoursRow = document.getElementById('sumHoursRow');
+      const sumRate = document.getElementById('sumRate');
+      const sumService = document.getElementById('sumService');
+
+      document.querySelectorAll('.service-radio-label').forEach(lbl => lbl.classList.remove('selected'));
+
+      if (serviceType === 'personal_chef') {
+        document.getElementById('opt-personal').classList.add('selected');
+        hoursGroup.style.display = 'block';
+        sumHoursRow.style.display = 'flex';
+        sumService.innerText = 'Personal Chef Service';
+        sumRate.innerText = '$30.00 / hour';
+      } else if (serviceType === 'catering') {
+        document.getElementById('opt-catering').classList.add('selected');
+        hoursGroup.style.display = 'none';
+        sumHoursRow.style.display = 'none';
+        sumService.innerText = 'Full Event Catering';
+        sumRate.innerText = 'Custom package quote';
+      } else {
+        document.getElementById('opt-truck').classList.add('selected');
+        hoursGroup.style.display = 'none';
+        sumHoursRow.style.display = 'none';
+        sumService.innerText = 'Food Truck Booking';
+        sumRate.innerText = 'Pop-up / event rate';
+      }
+      updateSummary();
+    }
+
+    // Recalculate Live Summary
+    function updateSummary() {
+      const guests = document.getElementById('guestCount').value || 1;
+      const hours = document.getElementById('serviceHours').value || 3;
+      const dateVal = document.getElementById('eventDate').value;
+      const locVal = document.getElementById('eventLoc').value;
+      const dateLocEl = document.getElementById('sumDateLoc');
+      const totalEl = document.getElementById('sumTotal');
+
+      document.getElementById('sumGuests').innerText = guests + ' People';
+      document.getElementById('sumHours').innerText = hours + ' Hours';
+
+      if (dateVal || locVal) {
+        dateLocEl.innerText = (dateVal || 'Date TBA') + ' — ' + (locVal || 'South Florida');
+      } else {
+        dateLocEl.innerText = 'Pending date selection';
+      }
+
+      if (currentService === 'personal_chef') {
+        const estTotal = hours * 30;
+        totalEl.innerText = '$' + estTotal.toFixed(2);
+      } else if (currentService === 'catering') {
+        totalEl.innerText = 'Custom Quote';
+      } else {
+        totalEl.innerText = 'Event Booking';
+      }
+
+      // Wishlist display
+      const wishlistDisplay = document.getElementById('wishlistDisplay');
+      if (wishlist.length > 0) {
+        wishlistDisplay.innerText = wishlist.join(" • ");
+      } else {
+        const customNotes = document.getElementById('menuNotes').value;
+        wishlistDisplay.innerText = customNotes ? customNotes : "(Click dishes on the menu to add them here)";
+      }
+    }
+
+    // Submit via WhatsApp
+    function submitToWhatsApp() {
+      const name = document.getElementById('custName').value || 'Guest';
+      const phone = document.getElementById('custPhone').value || 'Not provided';
+      const dateVal = document.getElementById('eventDate').value || 'Flexible';
+      const loc = document.getElementById('eventLoc').value || 'South Florida';
+      const guests = document.getElementById('guestCount').value || '8';
+      const hours = document.getElementById('serviceHours').value || '4';
+      const notes = document.getElementById('menuNotes').value || 'None specified';
+      
+      let serviceTitle = 'Personal Chef ($30/hr)';
+      if (currentService === 'catering') serviceTitle = 'Full Event Catering';
+      if (currentService === 'food_truck') serviceTitle = 'Food Truck Booking';
+
+      let msg = `*NEW BOOKING INQUIRY — KICK BACK BAKES*%0A%0A` +
+                `*Name:* ${encodeURIComponent(name)}%0A` +
+                `*Phone:* ${encodeURIComponent(phone)}%0A` +
+                `*Service Requested:* ${encodeURIComponent(serviceTitle)}%0A` +
+                `*Event Date:* ${encodeURIComponent(dateVal)}%0A` +
+                `*Location:* ${encodeURIComponent(loc)}%0A` +
+                `*Guests:* ${encodeURIComponent(guests)}%0A`;
+                
+      if (currentService === 'personal_chef') {
+        msg += `*Estimated Hours:* ${encodeURIComponent(hours)} hrs ($${hours * 30})%0A`;
+      }
+      
+      msg += `*Menu Notes / Wishlist:* ${encodeURIComponent(notes)}%0A%0A` +
+             `_Sent via Kick Back Bakes Website_`;
+
+      const whatsappUrl = `https://wa.me/17542019376?text=${msg}`;
+      window.open(whatsappUrl, '_blank');
+    }
+
+    // Submit via Email
+    function submitViaEmail() {
+      const name = document.getElementById('custName').value || 'Guest';
+      const phone = document.getElementById('custPhone').value || 'Not provided';
+      const dateVal = document.getElementById('eventDate').value || 'Flexible';
+      const loc = document.getElementById('eventLoc').value || 'South Florida';
+      const guests = document.getElementById('guestCount').value || '8';
+      const hours = document.getElementById('serviceHours').value || '4';
+      const notes = document.getElementById('menuNotes').value || 'None specified';
+
+      const subject = encodeURIComponent(`Kick Back Bakes Booking Inquiry - ${name}`);
+      const body = encodeURIComponent(
+        `Hi Chef Tiesha,\n\n` +
+        `I would like to inquire about booking Kick Back Bakes:\n\n` +
+        `• Name: ${name}\n` +
+        `• Phone: ${phone}\n` +
+        `• Service: ${currentService}\n` +
+        `• Date: ${dateVal}\n` +
+        `• Location: ${loc}\n` +
+        `• Guest Count: ${guests}\n` +
+        `• Hours (if Personal Chef): ${hours}\n` +
+        `• Menu Wishes: ${notes}\n\n` +
+        `Looking forward to hearing from you!\n`
+      );
+
+      window.location.href = `mailto:kickbackbakes@gmail.com?subject=${subject}&body=${body}`;
+    }
+
+    // Initialize default state
+    updateSummary();
+  </script>
+</body>
+</html>
